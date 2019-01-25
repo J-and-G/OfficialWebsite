@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+/* @import url("micons/micons.css"); */
+
+/* loading page styling */
+.loading-page{
+	background: #0d0d0d;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loading-page .counter {
+	text-align: center;
+}
+
+.loading-page .counter h1{
+	font-weight: 600;
+	color: #f60d54;
+
+}
+.loading-page .counter p {
+	font-size: 3rem;
+	color: white;
+	margin-top: 0px;
+	padding: 0px;
+	margin-top: 6px;
+	font-weight: 500;
+}
+
+.loading-page .counter hr {
+	background: #f60d54;
+	border: none;
+	height: 2px;
+	margin-top: 16px;
+	width: 0px;
+  }
+
+
+
+
+#home {
+	background: #020507;
+	width: 100vw;
+	height: 100vh;
+	min-height: 800px;
+	z-index: 600;
+	display: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#home .shadow-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .9;
+	background: -moz-linear-gradient(left, black 0%, black 20%, transparent 100%);  /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, black 0%, black 20%, transparent 100%);  /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, black 0%, black 20%, transparent 100%);  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);  /* IE6-9 */
+	display:block;
+}
+#home .row {
+	max-width: 1290px;
+}
+
+#home.home-static {
+	/* background-image: url(../images/home-bg.jpg); */
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+#home.home-particles {
+	background: #020507;
+	overflow: hidden;
+}
+#home.home-particles .pg-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100% !important;
+	width: 100% !important;
+	opacity: .33;
+}
+#home.home-particles .shadow-overlay {
+	display: none;
+}
+
+#home.home-slides {
+	height: 100% !important;
+}
