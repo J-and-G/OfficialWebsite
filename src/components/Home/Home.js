@@ -16,6 +16,18 @@ class Home extends Component {
             </div>
             <section id="home" className="home-particles">
 
+                <header>
+                    <div className="logo">
+                    </div>
+                </header>
+                <div className="center-title">
+                    <h1>ideate.</h1>
+                    <h1>create.</h1>
+                    <h1>iterate.</h1>
+                </div>
+
+                <div className="scroll-icon">
+                </div>
             </section>
         </div>
         
