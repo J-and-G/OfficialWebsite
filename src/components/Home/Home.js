@@ -15,7 +15,7 @@ class Home extends Component {
                 </div>
             </div>
             <section id="home" className="home-particles">
-
+                <h1> Our site is launching soon.. Be prepared. </h1>
             </section>
         </div>
         
