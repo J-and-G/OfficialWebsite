@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from "../Header/Header";
 import './about.css';
 import video from "../../assets/video.mp4";
+import poster from "../../assets/poster.jpg"
 
 
 class About extends Component {
