@@ -48,7 +48,6 @@
     background: #020507;
     width: 100vw;
     height: 100vh;
-    min-height: 800px;
     z-index: 600;
     display: none;
     position: relative;
@@ -88,7 +87,7 @@
 
 #home.home-particles {
     background: #020507;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #home.home-particles .pg-canvas {
@@ -259,6 +258,7 @@ header {
 		-webkit-transform: translateY(20px);
 	}
 }
+
 
 
 

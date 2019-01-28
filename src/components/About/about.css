@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
+
+*{
+    font-family: 'Raleway',sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.first-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-div{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-content: center;
+}
+.intro{
+    width: 60vw;
+    text-align: center;
+    font-weight: 700;
+    color: #f60d54;
+}
+
+.services-offered{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}
