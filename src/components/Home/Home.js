@@ -29,7 +29,6 @@ class Home extends Component {
                     </div>
                 </div>
                 <section id="home" className="home-particles">
-
                     <div className="inner-home">
                         <Header clicked={this.onHamClick}/>
 
@@ -39,7 +38,14 @@ class Home extends Component {
                             <h1>iterate.</h1>
                         </div>
 
-                        <div className="scroll-icon">
+                        <div class="top-text">
+                            <a href="#info">Scroll for more info</a>
+                        </div>
+			   	        <div class="scroll-icon">
+                            <a href="#info" class="smoothscroll">
+                                <div class="mouse"></div>
+                            </a>
+                            <div class="end-top"></div>
                         </div>
                     </div>
 
@@ -50,6 +56,8 @@ class Home extends Component {
 
         );
     }
+  
+
 }
 
 export default Home;
