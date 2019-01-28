@@ -18,8 +18,8 @@ class About extends Component {
                   and dissecting before we recreate powerful ideas in the form of impactful softwares that help your 
                   brand narrate its unique ideas and reach out millions.
                 </h1> 
-                <p className="services-offered">
-                  Web Apps / Mobile Apps/ In-House Softwares/ Backend Management Services / Software Transformation Services/ Cloud Services/ And anything yet to be discovered
+                <p className="top-text">
+                  Our team
                 </p>
                 <div id="vr">&nbsp;</div>
               </div>
