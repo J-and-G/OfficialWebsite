@@ -6,8 +6,7 @@ import './header.css';
 const Header = ({clicked}) => (
     <header>
         <div className="logo">
-            <img src={Logo} alt=""/>
-
+            <span><a href="#" id="jg">JG</a></span><span><a id="labs" href="#">Labs</a></span>
         </div>
         <Hamburger clicked={clicked}/>
     </header>
