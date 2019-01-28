@@ -27,7 +27,7 @@ class Home extends Component {
                 </div>
 
                 <div class="top-text">
-                    <p>Scroll for more info</p>
+                    <a href="#info">Scroll for more info</a>
                 </div>
 			   	<div class="scroll-icon">
                     <a href="#info" class="smoothscroll">

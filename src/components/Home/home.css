@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
 /* @import url("micons/micons.css"); */
 
 /* loading page styling */
+
+*{
+	font-family: 'Raleway', sans-serif;
+}
 .loading-page{
 	background: #0d0d0d;
 	width: 100vw;
@@ -114,6 +119,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	
 }
 
 .center-title h1{
@@ -121,6 +127,7 @@
 	color: #f60d54;
 	opacity: 0.8;
 	margin-left: 10px;
+	font-weight: 600;
 }
 
 
@@ -132,13 +139,14 @@
 	width: 100vw;
 	text-align: center;
 	height: 30px;
-	bottom: 108px;
+	bottom: 112px;
 }
 
-.top-text p{
+.top-text a{
 	color: #ffffff;
 	opacity: 0.7;
 	font-size: 1rem;
+	text-decoration: none;
 }
 .scroll-icon {
 	position: absolute;
