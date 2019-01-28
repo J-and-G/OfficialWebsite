@@ -26,7 +26,14 @@ class Home extends Component {
                     <h1>iterate.</h1>
                 </div>
 
-                <div className="scroll-icon">
+                <div class="top-text">
+                    <p>Scroll for more info</p>
+                </div>
+			   	<div class="scroll-icon">
+                    <a href="#info" class="smoothscroll">
+                        <div class="mouse"></div>
+                    </a>
+                    <div class="end-top"></div>
                 </div>
             </section>
         </div>
