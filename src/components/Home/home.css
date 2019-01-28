@@ -48,7 +48,6 @@
     background: #020507;
     width: 100vw;
     height: 100vh;
-    min-height: 800px;
     z-index: 600;
     display: none;
     position: relative;
@@ -88,7 +87,7 @@
 
 #home.home-particles {
     background: #020507;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #home.home-particles .pg-canvas {
@@ -126,7 +125,6 @@ header {
 .logo {
     width: 75px;
     height: 87px;
-    /*background: red;*/
 }
 
 .logo img {
@@ -146,8 +144,9 @@ header {
 .center-title h1 {
     font-size: 69px;
     color: #f60d54;
-    opacity: 0.8;
+    opacity: 0.65;
     margin-left: 10px;
+    font-weight: 600;
 }
 
 .inner-home {
@@ -221,9 +220,10 @@ header {
 	top: 10px;
 	display: block;
 	text-align: center;
-	z-index: 700;
+    z-index: 700;
+    animation: vertical 3s ease infinite;
 	-webkit-animation: vertical 3s ease infinite;
-	animation: vertical 3s ease infinite;
+	
 }
 .scroll-icon .mouse::before {
 	content: "";
@@ -237,17 +237,6 @@ header {
 	margin-left: -1.5px;
 	border-radius: 2px;
 }
-@-webkit-keyframes vertical {
-	0%, 60%, 80%, 100% {
-		-webkit-transform: translateY(0);
-	}
-	20% {
-		-webkit-transform: translateY(-5px);
-	}
-	40% {
-		-webkit-transform: translateY(20px);
-	}
-}
 @keyframes vertical {
 	0%, 60%, 80%, 100% {
 		-webkit-transform: translateY(0);
@@ -259,6 +248,19 @@ header {
 		-webkit-transform: translateY(20px);
 	}
 }
+
+@-webkit-keyframes vertical {
+	0%, 60%, 80%, 100% {
+		-webkit-transform: translateY(0);
+	}
+	20% {
+		-webkit-transform: translateY(-5px);
+	}
+	40% {
+		-webkit-transform: translateY(20px);
+	}
+}
+
 
 
 
