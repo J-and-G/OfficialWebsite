@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from "../Header/Header";
 import './about.css';
 import video from "../../assets/video.mp4";
-import poster from "../../assets/poster.jpg"
+import poster from "../../assets/poster.png"
 
 
 class About extends Component {
@@ -24,7 +24,7 @@ class About extends Component {
                 </p>
                 <div id="vr">&nbsp;</div>
               </div>
-              <video autoPlay loop muted>
+              <video poster={poster} autoPlay loop muted>
                 <source src={video} type="video/mp4"></source>
               </video>
             </div>
