@@ -13,7 +13,6 @@
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    border-radius: 5px;
     background-attachment: scroll;
     overflow: hidden;
 }
