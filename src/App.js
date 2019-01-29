@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import './main.css';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Team from './components/Team/Team';
 
 
 
 class App extends Component {
   render() {
     return (
-        <div>
-          {/* <Home /> */}
+        <div className="App">
+          <Home />
           <About />
+          <Team />
         </div> 
     )
   }
