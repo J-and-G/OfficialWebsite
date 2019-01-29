@@ -8,10 +8,14 @@
 *{
 	font-family: 'Raleway', sans-serif;
 }
+
+.home-page{
+    background: black;
+}
 .loading-page{
 	background: #0d0d0d;
 	width: 100vw;
-	height: 100vh;
+    height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -44,6 +48,10 @@
     width: 0px;
 }
 
+.home-page{
+    width: 100vw;
+    height: 100vh;
+}
 #home {
     background: #020507;
     width: 100vw;

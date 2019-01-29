@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
+*{
+    font-family: 'Raleway',sans-serif;
+}
+
+
+.team-list{
+    background: whitesmoke;
+}
+
+.team-member-container{
+    display: flex;
+    flex: 1;
+}
+
+
+.image-container{
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    background: black;
+}
+
+
+.image-poster{
+    width: 50%;
+    height: 100vh;
+}
+
+.text-container{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-details{
+    width: 40vw;
+    max-width: 550px;
+}
+
+.text-details h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.text-details h1{
+    font-weight: 600;
+}
+
+.text-details p{
+    font-size: 17px;
+    line-height: 1.69rem;
+    font-weight: 600;
+}
+
+#lets-talk{
+    flex: 1;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#lets-talk a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+}
+
+#lets-talk a:hover{
+    opacity: 1;
+}
+#lets-talk h1{
+    font-weight: 700;
+    font-size: 40px;
+}
+

@@ -22,7 +22,6 @@
 		$(".loading-page .counter p").html(counter + "%");
 		$(".loading-page .counter hr").css("visibility", "visible");
         $(".loading-page .counter hr").css("width", counter+ "%");
-        $(".loading-page .counter").css("background", "linear-gradient(to right, #f60d54 "+ c + "%,#0d0d0d "+ c + "%)");
   
       counter++;
       if(counter > 100) {
@@ -30,7 +29,7 @@
 		  clearInterval(i);
 		  $('.loading-page').fadeOut("slow","linear",()=>{
 			
-			$("#home").css("display","block").hide().fadeIn(3000);
+			$("#home").css("display","inline-block").hide().fadeIn(3000);
 			$('.home-particles').particleground({
 				dotColor: '#fff',
 				lineColor: '#555555',
@@ -39,7 +38,8 @@
 				density: 10000,
 				proximity: 110
 			 }); 
-		  })
+		  });
+		
 		 
       }
 	}, estimatedTime/100);

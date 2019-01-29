@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './home.css';
-
 import Nav from "../Nav/Nav";
 import Header from "../Header/Header";
 
