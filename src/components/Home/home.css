@@ -16,7 +16,6 @@
 	background: #0d0d0d;
 	width: 100vw;
     height: 100vh;
-    overflow-y:auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;

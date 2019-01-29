@@ -15,20 +15,15 @@
 
 
 .image-container{
-    width: 50vw;
+    width: 50%;
     height: 100vh;
     text-align: center;
     background: black;
 }
 
-.temp-poster{
-    max-width: 500px;
-    height: 100vh;
-
-}
 
 .image-poster{
-    width: 50vw;
+    width: 50%;
     height: 100vh;
 }
 
