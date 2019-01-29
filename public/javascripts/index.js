@@ -28,7 +28,7 @@
 		  counter=0;
 		  clearInterval(i);
 		  $('.loading-page').fadeOut("slow","linear",()=>{
-			
+			$("header").css("visibility", "visible").hide().fadeIn(3000);;
 			$("#home").css("display","inline-block").hide().fadeIn(3000);
 			$('.home-particles').particleground({
 				dotColor: '#fff',

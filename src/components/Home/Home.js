@@ -27,9 +27,10 @@ class Home extends Component {
                         <hr/>
                     </div>
                 </div>
+                <Header clicked={this.onHamClick}/>
                 <section id="home" className="home-particles">
                     <div className="inner-home">
-                        <Header clicked={this.onHamClick}/>
+
 
                         <div className="center-title">
                             <h1>ideate.</h1>
@@ -49,8 +50,8 @@ class Home extends Component {
                     </div>
 
                 </section>
-                <Nav on={this.state.nav}/>
 
+                <Nav on={this.state.nav}/>
             </div>
 
         );

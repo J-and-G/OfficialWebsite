@@ -1,60 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
-*{
-    font-family: 'Raleway',sans-serif;
+
+* {
+    font-family: 'Raleway', sans-serif;
 }
 
-
-.team-list{
+.team-list {
     background: whitesmoke;
 }
 
-.team-member-container{
+.team-member-container {
     display: flex;
     flex: 1;
 }
 
-
-.image-container{
+.image-container {
     width: 50%;
     height: 100vh;
     text-align: center;
     background: black;
 }
 
-
-.image-poster{
+.image-poster {
     width: 50%;
     height: 100vh;
 }
 
-.text-container{
+.text-container {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
 }
 
-.text-details{
+.text-details {
     width: 40vw;
     max-width: 550px;
 }
 
-.text-details h3{
+.text-details h3 {
     font-size: 15px;
     font-weight: 700;
 }
 
-.text-details h1{
+.text-details h1 {
     font-weight: 600;
 }
 
-.text-details p{
+.text-details p {
     font-size: 17px;
     line-height: 1.69rem;
     font-weight: 600;
 }
 
-#lets-talk{
+#lets-talk {
     flex: 1;
     height: 500px;
     display: flex;
@@ -63,17 +61,98 @@
     justify-content: center;
 
 }
-#lets-talk a{
+
+#lets-talk a {
     text-decoration: none;
     color: black;
     opacity: 0.8;
 }
 
-#lets-talk a:hover{
+#lets-talk a:hover {
     opacity: 1;
 }
-#lets-talk h1{
+
+#lets-talk h1 {
     font-weight: 700;
     font-size: 40px;
+}
+
+.image-poster {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-poster img {
+    width: 100%;
+}
+
+#lets-talk h1 {
+    position: relative;
+}
+
+#lets-talk h1:after {
+    content: '';
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    transition: all 0.25s ease-out;
+    width: 0;
+    left: 0;
+    animation: linehoveroff forwards .6s;
+}
+
+#lets-talk h1:hover:after {
+    animation: linehover forwards .6s;
+}
+
+@keyframes linehover {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes linehoveroff {
+    0% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .team-member-container:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    .team-member-container:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .image-poster {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .text-details {
+        width: 92vw;
+        padding: 10px;
+    }
+
+    #lets-talk h1 {
+        font-size: 30px;
+    }
 }
 

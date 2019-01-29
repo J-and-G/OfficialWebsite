@@ -7,8 +7,8 @@ const Nav = ({on}) => (
         <ul>
             <li>Home</li>
             <li>About</li>
-
         </ul>
+
     </div>
 );
 

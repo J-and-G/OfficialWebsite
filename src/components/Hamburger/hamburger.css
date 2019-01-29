@@ -33,3 +33,16 @@
     width: 15px;
     height: 15px;
 }
+
+
+.hamburger-icon-open .ham {
+    left: 50% !important;
+    width: 15px !important;
+    height: 15px !important;
+    background: none;
+    border: 1px solid white;
+}
+
+.hamburger-icon-open:hover .ham {
+    background: white;
+}
