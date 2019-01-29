@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from "../Header/Header";
 import './about.css';
-import video from "../../assets/video.mp4";
+import video from "../../assets/video520.mp4";
 import poster from "../../assets/poster.png"
 
 
