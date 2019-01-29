@@ -1,0 +1,65 @@
+.contact-us{
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    background: whitesmoke;
+}
+
+.address-container{
+    flex: 1;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.phone-container{
+    flex: 1;
+    background: rgba(0,0,0,0.90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.address{
+    display: flex;
+}
+
+.contact{
+    display: flex;
+}
+
+.address h4{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}   
+
+.address p{
+    color: white;
+    font-size: 14px;
+}
+
+.address img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+
+.contact h4{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}   
+
+.contact p{
+    color: white;
+    font-size: 14px;
+}
+
+.contact img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
