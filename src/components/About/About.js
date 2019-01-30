@@ -19,6 +19,8 @@ class About extends Component {
                   and dissecting before recreating your powerful ideas in the form of impactful softwares that help your 
                   brand narrate its unique ideas and reach out millions.
                 </h1> 
+
+                <p class="services-provided"> Mobile Solutions / Web Solutions / Cloud Solutions/ In-House Softwares/ And anything yet to be discovered  </p>
                 <p className="team">
                   Our team
                 </p>
