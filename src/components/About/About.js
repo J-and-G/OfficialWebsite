@@ -3,19 +3,14 @@ import Header from "../Header/Header";
 import './about.css';
 import video from "../../assets/video520.mp4";
 import poster from "../../assets/poster.png"
-import $ from 'jquery';
 
 class About extends Component {
-    componentDidMount() {
-        $("header").css("visibility", "visible");
-
-    }
-
     render() {
         return (
             <div class="first-page">
                 <div className="videoContainer">
                     <div className="overlay">
+                        <Header/>
                         <h1 className="intro">
                             We are a software solution agency based in the city of Hong Kong.
                             We devote ourselves towards realising your ideas by listening, asking, researching, thinking
@@ -23,6 +18,9 @@ class About extends Component {
                             help your
                             brand narrate its unique ideas and reach out millions.
                         </h1>
+
+                        <p class="services-provided"> Mobile Solutions / Web Solutions / Cloud Solutions/ In-House
+                            Softwares/ And anything yet to be discovered </p>
                         <p className="team">
                             Our team
                         </p>
@@ -32,7 +30,6 @@ class About extends Component {
                         <source src={video} type="video/mp4"></source>
                     </video>
                 </div>
-
             </div>
 
         );

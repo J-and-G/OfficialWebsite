@@ -23,7 +23,7 @@
 }
 .overlay {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +41,17 @@
     font-weight: 700;
     color: white;
     opacity: 0.8;
+}
+
+.services-provided{
+    color: #f60d54;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 80px;
+    padding-right: 20px;
+    width: 100%;
+    text-align: center;
+
 }
 
 .team{
@@ -79,6 +90,12 @@
 @media(max-width: 480px){
     .overlay h1{
         font-size: 1.1rem;
+    }
+
+    .services-provided{
+        font-size: 0.9rem;
+        width: 85%;
+        text-align: center;
     }
 
 
