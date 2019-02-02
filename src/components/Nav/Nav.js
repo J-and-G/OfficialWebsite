@@ -1,12 +1,17 @@
 import React from 'react';
 import './nav.css';
-import Header from '../Header/Header';
+import {Link} from 'react-router-dom';
 
-const Nav = ({on}) => (
+
+
+const Nav = ({on, clicked}) => (
     <div className={["navbar", on?"navbar-activated":null ].join(" ")}>
         <ul>
-            <li>Home</li>
-            <li>About</li>
+            <ul>
+                <li><Link onClick={()=>{clicked()}} to='/about'>About</Link></li>
+                <li><Link onClick={()=>{clicked()}} to='/team'>Team</Link></li>
+                <li><Link onClick={()=>{clicked()}} to='/contact'>Contact</Link></li>
+            </ul>
         </ul>
 
     </div>

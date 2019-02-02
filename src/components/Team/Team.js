@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import Header from "../Header/Header";
 import './team.css';
 import abhi from "../../assets/abhi.png";
 import shikhar from "../../assets/shikhar.png";
 import temp from "../../assets/temp.png";
+import $ from 'jquery';
 
 
 class About extends Component {
+    componentDidMount() {
+        $("header").css("visibility", "visible");
+    }
 
     render() {
         return (
@@ -65,9 +68,7 @@ class About extends Component {
                         </div>
                     </div>
                 </section>
-                <section id="lets-talk">
-                    <h1><a href="mailto: conveytoshikhar@gmail.com">Let's talk business</a></h1>
-                </section>
+
 
             </div>
 

@@ -18,3 +18,13 @@
     font-size: 1rem; 
     text-decoration: none;
 }
+header.dark #jg {
+    color: #333333;
+}
+header.dark .ham{
+    background: #333333;
+}
+
+.link-home{
+    text-decoration: none !important;
+}
