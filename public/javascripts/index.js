@@ -13,6 +13,7 @@
 	/* ----------
 	Loading Page
 	----------*/
+    $("header").css("visibility", "hidden");
 	var counter = 0;
 	var c = 0;
     var perfData = window.performance.timing // The PerformanceTiming interface
@@ -28,7 +29,7 @@
 		  counter=0;
 		  clearInterval(i);
 		  $('.loading-page').fadeOut("slow","linear",()=>{
-			$("header").css("visibility", "visible").hide().fadeIn(3000);;
+			$("header").css("visibility", "visible").hide().fadeIn(3000);
 			$("#home").css("display","inline-block").hide().fadeIn(3000);
 			$('.home-particles').particleground({
 				dotColor: '#fff',
@@ -39,8 +40,6 @@
 				proximity: 110
 			 }); 
 		  });
-		
-		 
       }
 	}, estimatedTime/100);
 	
