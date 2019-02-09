@@ -46,3 +46,7 @@
 .hamburger-icon-open:hover .ham {
     background: white;
 }
+
+header .hamburger-icon-dark .ham{
+    background: #333333;
+}

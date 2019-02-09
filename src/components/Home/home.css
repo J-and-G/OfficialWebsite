@@ -127,7 +127,6 @@ header {
     width: 100%;
     padding: 20px 40px;
     z-index: 602;
-    visibility: hidden;
 }
 
 
@@ -236,7 +235,7 @@ header {
 	text-align: center;
     z-index: 700;
     animation: vertical 3s ease infinite;
-	-webkit-animation: vertical 3s ease infinite;
+	/*-webkit-animation: vertical 3s ease infinite;*/
 	
 }
 .scroll-icon .mouse::before {
@@ -253,26 +252,36 @@ header {
 }
 @keyframes vertical {
 	0%, 60%, 80%, 100% {
-		-webkit-transform: translateY(0);
+		transform: translateY(0);
 	}
 	20% {
-		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
 	}
 	40% {
-		-webkit-transform: translateY(20px);
+		transform: translateY(20px);
 	}
 }
 
-@-webkit-keyframes vertical {
-	0%, 60%, 80%, 100% {
-		-webkit-transform: translateY(0);
-	}
-	20% {
-		-webkit-transform: translateY(-5px);
-	}
-	40% {
-		-webkit-transform: translateY(20px);
-	}
+/*@-webkit-keyframes vertical {*/
+	/*0%, 60%, 80%, 100% {*/
+		/*-webkit-transform: translateY(0);*/
+	/*}*/
+	/*20% {*/
+		/*-webkit-transform: translateY(-5px);*/
+	/*}*/
+	/*40% {*/
+		/*-webkit-transform: translateY(20px);*/
+	/*}*/
+/*}*/
+
+.backup-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,40);
+    z-index: 1000;
 }
 
 

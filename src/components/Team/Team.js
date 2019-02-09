@@ -8,7 +8,8 @@ import $ from 'jquery';
 
 class About extends Component {
     componentDidMount() {
-        $("header").css("visibility", "visible");
+        $("header").removeClass("dark");
+        $(".hamburger-icon").addClass("hamburger-icon-dark");
     }
 
     render() {

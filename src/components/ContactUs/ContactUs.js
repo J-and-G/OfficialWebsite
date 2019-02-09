@@ -7,7 +7,6 @@ import $ from 'jquery';
 
 class Contact extends Component {
     componentDidMount() {
-        $("header").css("visibility", "visible");
         $("header").addClass("dark");
     }
 

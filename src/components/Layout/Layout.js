@@ -7,7 +7,7 @@ import Team from "../Team/Team";
 import Contact from "../ContactUs/ContactUs";
 import {Route, Switch} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
-
+import $ from 'jquery';
 
 class Layout extends Component {
     state = {
@@ -16,6 +16,10 @@ class Layout extends Component {
 
     onHamClick = () => {
         this.setState(prev => ({nav: !prev.nav}))
+        if($("header").hasClass("dark")){
+            $("header").toggleClass("dark");
+        }
+
     }
     navOff = () => {
         this.setState(prev => ({nav: false}))
