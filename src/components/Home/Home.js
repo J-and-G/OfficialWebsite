@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import './home.css';
 import Preloader from "../Preloader/Preloader";
+import About from "../About/About";
+import Team from "../Team/Team";
+import ContactUs from "../ContactUs/ContactUs";
+
 import $ from "jquery";
 
 class Home extends Component {
@@ -9,8 +13,27 @@ class Home extends Component {
         preloader: true
     }
 
+    // componentWillMount(){
+
+    //     const script1 = document.createElement("script");
+    //     script1.src = "/javascripts/plugins.js";
+    //     document.body.appendChild(script1);
+
+    // }
+
     componentDidMount() {
         $("header").removeClass("dark");
+        $(document).scroll(function() {
+            $(".slideanim").each(function(){
+              var pos = $(this).offset().top;
+          
+              var winTop = $(window).scrollTop();
+              if (pos < winTop + 600) {
+                $(this).addClass("slide");
+              }
+            });
+          });
+        //setTimeout(() => {document.addEventListener('scroll',this.hadnleScroll)},3000);
 
         if (localStorage.getItem("p") !== "t") {
             const script1 = document.createElement("script");
@@ -27,17 +50,56 @@ class Home extends Component {
         else {
             this.setState({preloader: false});
 
-            const script1 = document.createElement("script");
-            script1.src = "/javascripts/plugins.js";
-            document.body.appendChild(script1);
+            // const script1 = document.createElement("script");
+            // script1.src = "/javascripts/plugins.js";
+            // document.body.appendChild(script1);
 
             const script2 = document.createElement("script");
             script2.src = "/javascripts/index-mod.js";
             document.body.appendChild(script2);
 
+            // function script1(){
+            //     return new Promise(function (fulfill, reject){
+            //         //do stuff
+            //         const script1 = document.createElement("script");
+            // script1.src = "/javascripts/plugins.js";
+            // document.body.appendChild(script1);
+            //         // fulfill(result); //if the action succeeded
+            //         // reject(error); //if the action did not succeed
+            //     });
+            // }
+
+            // script1().then(function(){   const script2 = document.createElement("script");
+            // script2.src = "/javascripts/index-mod.js";
+            // document.body.appendChild(script2);})
+
+            // $.when(function(){  const script1 = document.createElement("script");
+            // script1.src = "/javascripts/plugins.js";
+            // document.body.appendChild(script1);}).then(function(){   const script2 = document.createElement("script");
+            // script2.src = "/javascripts/index-mod.js";
+            // document.body.appendChild(script2);});
         }
 
 
+    }
+
+    // function1(){
+
+    //     const script1 = document.createElement("script");
+    //         script1.src = "/javascripts/plugins.js";
+    //         document.body.appendChild(script1);
+
+    // }
+
+    // function2(){
+    //     const script2 = document.createElement("script");
+    //         script2.src = "/javascripts/index-mod.js";
+    //         document.body.appendChild(script2);
+    // }
+
+    handleScroll = () => {
+        $(document).fadeOut();
+        this.props.history.push('/about')
     }
 
     render() {
@@ -71,6 +133,11 @@ class Home extends Component {
                     </div>
 
                 </section>
+                <About></About>
+    
+                <Team></Team>
+                <ContactUs></ContactUs>
+
             </div>
 
 

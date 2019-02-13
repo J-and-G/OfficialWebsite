@@ -13,7 +13,15 @@ class Layout extends Component {
     state = {
         nav: false,
     }
+    
+    componentWillMount(){
 
+        const script1 = document.createElement("script");
+        script1.src = "/javascripts/plugins.js";
+        document.body.appendChild(script1);
+
+    }
+    
     onHamClick = () => {
         this.setState(prev => ({nav: !prev.nav}))
         if($("header").hasClass("dark")){

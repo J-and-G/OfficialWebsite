@@ -5,9 +5,14 @@
  * -------------------------------------------------------------------
  */
 
-(function ($) {
 
+
+
+
+(function ($) {
+    
     "use strict";
+    
 
     $(".backup-overlay").fadeOut(1500);
     // $("#home").css("display", "inline-block").hide().fadeIn(3000);
