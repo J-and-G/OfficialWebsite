@@ -22,17 +22,23 @@ class Home extends Component {
     // }
 
     componentDidMount() {
+        //document.addEventListener('scroll',this.handleScroll);
+        // handleScroll = ()=>{
+        //     this.props.history.push('/about')
+        // }
+        document.onscroll = ()=>{ this.props.history.push('/about')}
         $("header").removeClass("dark");
-        $(document).scroll(function() {
-            $(".slideanim").each(function(){
-              var pos = $(this).offset().top;
+        
+        // $(document).scroll(function() {
+        //     $(".slideanim").each(function(){
+        //       var pos = $(this).offset().top;
           
-              var winTop = $(window).scrollTop();
-              if (pos < winTop + 600) {
-                $(this).addClass("slide");
-              }
-            });
-          });
+        //       var winTop = $(window).scrollTop();
+        //       if (pos < winTop + 600) {
+        //         $(this).addClass("slide");
+        //       }
+        //     });
+        //   });
         //setTimeout(() => {document.addEventListener('scroll',this.hadnleScroll)},3000);
 
         if (localStorage.getItem("p") !== "t") {
@@ -80,6 +86,7 @@ class Home extends Component {
             // document.body.appendChild(script2);});
         }
 
+        
 
     }
 
@@ -97,10 +104,9 @@ class Home extends Component {
     //         document.body.appendChild(script2);
     // }
 
-    handleScroll = () => {
-        $(document).fadeOut();
-        this.props.history.push('/about')
-    }
+    
+
+    
 
     render() {
 

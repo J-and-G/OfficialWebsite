@@ -24,6 +24,7 @@ class About extends Component {
     }
 
     componentDidMount() {
+        
         this.loadVideo();
         window.onresize = this.loadVideo;
     }

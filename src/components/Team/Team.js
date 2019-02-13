@@ -8,6 +8,7 @@ import $ from 'jquery';
 
 class About extends Component {
     componentDidMount() {
+        //document.onscroll = ()=>{ this.props.history.push('/about')}
         $("header").removeClass("dark");
         $(".hamburger-icon").addClass("hamburger-icon-dark");
         $(document).scroll(function() {
@@ -26,7 +27,7 @@ class About extends Component {
     render() {
         return (
             <div class="team-list">
-                <section id="member-1" class="team-member-container slideanim">
+                <section id="member-1" class="team-member-container slide">
                     <div className="image-poster"><img src={abhi} alt="developer"/></div>
 
                     <div class="text-container">
