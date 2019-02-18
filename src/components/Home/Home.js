@@ -146,6 +146,7 @@ class Home extends Component {
                     </div>
 
                 </section>
+
                 <About></About>
                 <Team></Team>
                 <ContactUs></ContactUs>

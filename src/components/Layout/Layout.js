@@ -59,12 +59,7 @@ class Layout extends Component {
                 
                 </Route>
 
-                 <SwipeableRoutes enableMouseEvents>
-    <Route exact component={Home} path="/" />
-    <Route exact component={About} path="/about" />
-    <Route component={Team} path="/team" />
-    <Route component={Contact} path="/contact" />
- </SwipeableRoutes>
+            
                 <Nav on={this.state.nav} clicked={this.onHamClick} />
             </div>
 
