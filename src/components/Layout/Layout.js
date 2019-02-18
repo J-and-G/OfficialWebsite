@@ -5,8 +5,9 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import Team from "../Team/Team";
 import Contact from "../ContactUs/ContactUs";
-import {Route, Switch} from "react-router-dom";
+import {Route, Switch, BrowserRouter as Router, Link} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import SwipeableRoutes from "react-swipeable-routes";
 import $ from 'jquery';
 
 class Layout extends Component {
@@ -53,7 +54,17 @@ class Layout extends Component {
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>
-                )}/>
+                )}>
+                
+                
+                </Route>
+
+                 <SwipeableRoutes enableMouseEvents>
+    <Route exact component={Home} path="/" />
+    <Route exact component={About} path="/about" />
+    <Route component={Team} path="/team" />
+    <Route component={Contact} path="/contact" />
+ </SwipeableRoutes>
                 <Nav on={this.state.nav} clicked={this.onHamClick} />
             </div>
 

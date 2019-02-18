@@ -4,7 +4,8 @@ import Preloader from "../Preloader/Preloader";
 import About from "../About/About";
 import Team from "../Team/Team";
 import ContactUs from "../ContactUs/ContactUs";
-
+import SwipeableRoutes from "react-swipeable-routes";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import $ from "jquery";
 
 class Home extends Component {
@@ -26,7 +27,7 @@ class Home extends Component {
         // handleScroll = ()=>{
         //     this.props.history.push('/about')
         // }
-        document.onscroll = ()=>{ this.props.history.push('/about')}
+ 
         $("header").removeClass("dark");
         
         // $(document).scroll(function() {
@@ -113,6 +114,12 @@ class Home extends Component {
         return (
             <div className="home-page">
 
+                 
+       
+         
+      
+      
+
                 {this.state.preloader && <Preloader/>}
                 {!this.state.preloader && <div className="backup-overlay"></div>}
 
@@ -140,9 +147,9 @@ class Home extends Component {
 
                 </section>
                 <About></About>
-    
                 <Team></Team>
                 <ContactUs></ContactUs>
+             
 
             </div>
 
