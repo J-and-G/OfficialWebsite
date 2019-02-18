@@ -8,7 +8,7 @@ import $ from 'jquery';
 class Contact extends Component {
     componentDidMount() {
         $("header").addClass("dark");
-        setTimeout(()=>{$(".backup-overlay").addClass("hide-overlay")},50)
+        setTimeout(()=>{$(".backup-overlay").addClass("hide-overlay")},200)
     }
 
     render() {

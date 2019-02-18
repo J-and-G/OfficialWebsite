@@ -13,7 +13,7 @@ import $ from 'jquery';
 class Layout extends Component {
     state = {
         nav: false,
-        component: 2
+        component: 0
     }
 
     onHamClick = () => {
@@ -29,12 +29,10 @@ class Layout extends Component {
 
     handleScrollDown = () => {
         console.log("scroll up");
-        // console.log(window.pageYOffset);
         this.setState(prev => ({component: ((prev.component+1)%4)}))
     }
     handleScrollUp = () => {
         console.log("scroll down");
-
         this.setState(prev => ({component: ((prev.component-1)%4)}))
     }
 
