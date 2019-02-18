@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import './about.css';
 import video from "../../assets/video520.mp4";
 import poster from "../../assets/poster.png"
+import $ from "jquery";
 
 class About extends Component {
+
 
     loadVideo = (e) => {
         console.log(window.innerWidth);
@@ -24,14 +26,18 @@ class About extends Component {
     }
 
     componentDidMount() {
-        
-        this.loadVideo();
-        window.onresize = this.loadVideo;
+        setTimeout(()=>{$(".backup-overlay").addClass("hide-overlay")},100)
+
+        // this.loadVideo();
+        // window.onresize = this.loadVideo;
+        // $(".backup-overlay").addClass("hide-overlay");
     }
 
     render() {
         return (
+
             <div className="first-page">
+                <div className="backup-overlay"></div>
                 <div className="videoContainer">
                     <div className="overlay">
                         <h1 className="intro">
@@ -50,6 +56,7 @@ class About extends Component {
                         <div id="vr">&nbsp;</div>
                     </div>
                     <video id="about-bg-video" poster={poster} autoPlay loop muted>
+                        <source src={video} type="video/mp4" />
                     </video>
                 </div>
             </div>

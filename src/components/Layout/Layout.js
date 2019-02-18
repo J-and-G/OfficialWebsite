@@ -5,9 +5,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import Team from "../Team/Team";
 import Contact from "../ContactUs/ContactUs";
-import {Route, Switch, BrowserRouter as Router, Link} from "react-router-dom";
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
-import SwipeableRoutes from "react-swipeable-routes";
+import {Route} from "react-router-dom";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 import $ from 'jquery';
@@ -15,16 +13,8 @@ import $ from 'jquery';
 class Layout extends Component {
     state = {
         nav: false,
-        component: 0
+        component: 2
     }
-
-    // componentWillMount(){
-
-    //     const script1 = document.createElement("script");
-    //     script1.src = "/javascripts/plugins.js";
-    //     document.body.appendChild(script1);
-
-    // }
 
     onHamClick = () => {
         this.setState(prev => ({nav: !prev.nav}))
@@ -39,10 +29,12 @@ class Layout extends Component {
 
     handleScrollDown = () => {
         console.log("scroll up");
+        // console.log(window.pageYOffset);
         this.setState(prev => ({component: ((prev.component+1)%4)}))
     }
     handleScrollUp = () => {
         console.log("scroll down");
+
         this.setState(prev => ({component: ((prev.component-1)%4)}))
     }
 
@@ -50,6 +42,7 @@ class Layout extends Component {
 
         return (
             <ReactScrollWheelHandler
+                // pauseListeners = {this.state.component==2}
                 upHandler={() => this.handleScrollUp()}
                 downHandler={() => this.handleScrollDown()}>
                 <div className="layout">

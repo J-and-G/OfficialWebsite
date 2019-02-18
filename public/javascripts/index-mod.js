@@ -127,9 +127,9 @@ function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.reque
 (function ($) {
     
     "use strict";
-    
 
-    $(".backup-overlay").fadeOut(1500);
+
+    $(".backup-overlay").addClass("hide-overlay");
     // $("#home").css("display", "inline-block").hide().fadeIn(3000);
     $('.home-particles').particleground({
         dotColor: '#fff',

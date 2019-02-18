@@ -282,8 +282,15 @@ header {
     width: 100vw;
     background: rgba(0,0,0,40);
     z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.7s ease-out;
 }
 
+.backup-overlay.hide-overlay {
+    visibility: hidden;
+    opacity: 0;
+}
 /*slide anim*/
 .slideanim {visibility:hidden;}
 .slide {

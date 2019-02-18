@@ -8,11 +8,13 @@ import $ from 'jquery';
 class Contact extends Component {
     componentDidMount() {
         $("header").addClass("dark");
+        setTimeout(()=>{$(".backup-overlay").addClass("hide-overlay")},50)
     }
 
     render() {
         return (
             <div>
+                <div className="backup-overlay"></div>
                 <section id="lets-talk">
                     <h1><a href="mailto: conveytoshikhar@gmail.com">Let's talk business</a></h1>
                 </section>

@@ -28,7 +28,7 @@ class Home extends Component {
         // handleScroll = ()=>{
         //     this.props.history.push('/about')
         // }
-        
+
 
         $("header").removeClass("dark");
         
@@ -44,7 +44,7 @@ class Home extends Component {
         //   });
         //setTimeout(() => {document.addEventListener('scroll',this.hadnleScroll)},3000);
 
-        if (localStorage.getItem("p") !== "t") {
+        if (sessionStorage.getItem("p") !== "t") {
             const script1 = document.createElement("script");
             const script2 = document.createElement("script");
 
@@ -54,7 +54,7 @@ class Home extends Component {
             document.body.appendChild(script1);
             document.body.appendChild(script2);
 
-            localStorage.setItem("p", "t");
+            sessionStorage.setItem("p", "t");
         }
         else {
             this.setState({preloader: false});
