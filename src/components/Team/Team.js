@@ -4,7 +4,7 @@ import abhi from "../../assets/abhi.png";
 import shikhar from "../../assets/shikhar.png";
 import temp from "../../assets/temp.png";
 import $ from 'jquery';
-
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 class About extends Component {
     componentDidMount() {
@@ -26,7 +26,13 @@ class About extends Component {
 
     render() {
         return (
+          
             <div class="team-list">
+            
+            
+            
+           
+
                 <section id="member-1" class="team-member-container slide">
                     <div className="image-poster"><img src={abhi} alt="developer"/></div>
 
@@ -79,8 +85,9 @@ class About extends Component {
                     </div>
                 </section>
 
-
+            
             </div>
+            
 
         );
     }

@@ -114,14 +114,14 @@ class Home extends Component {
     render() {
 
         return (
-           
+             <ReactScrollWheelHandler
+            upHandler={() => console.log("Scroll down")}
+            downHandler={() => console.log("Scroll Up")}>
             
             <div className="home-page">
 
-            <ReactScrollWheelHandler
-            upHandler={() => console.log("scroll up")}
-            downHandler={() => console.log("scroll down")}>
-            </ReactScrollWheelHandler>
+          
+          
 
                  
        
@@ -156,12 +156,13 @@ class Home extends Component {
 
                 </section>
 
-                {/* <About></About> */}
+    
 
               
              
 
             </div>
+            </ReactScrollWheelHandler>
 
 
         );
