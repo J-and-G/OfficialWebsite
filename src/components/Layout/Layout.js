@@ -35,7 +35,7 @@ class Layout extends Component {
     handleScrollUp = () => {
         console.log("scroll down");
 
-        this.setState(prev => ({component: ((prev.component-1)%4)}))
+        this.setState(prev => prev.component==0 ? ({component: 3}) : ({component: ((prev.component-1)%4)}))
     }
 
     render() {
