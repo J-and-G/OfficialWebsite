@@ -6,7 +6,7 @@ import Team from "../Team/Team";
 import ContactUs from "../ContactUs/ContactUs";
 import SwipeableRoutes from "react-swipeable-routes";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+
 import $ from "jquery";
 
 class Home extends Component {
@@ -114,9 +114,7 @@ class Home extends Component {
     render() {
 
         return (
-             <ReactScrollWheelHandler
-            upHandler={() => console.log("Scroll down")}
-            downHandler={() => console.log("Scroll Up")}>
+
             
             <div className="home-page">
 
@@ -162,7 +160,7 @@ class Home extends Component {
              
 
             </div>
-            </ReactScrollWheelHandler>
+
 
 
         );
