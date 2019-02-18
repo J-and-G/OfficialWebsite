@@ -13,7 +13,7 @@ import $ from 'jquery';
 class Layout extends Component {
     state = {
         nav: false,
-        component: 2
+        component: 0
     }
 
     onHamClick = () => {
@@ -24,7 +24,7 @@ class Layout extends Component {
 
     }
     navOff = () => {
-        this.setState(prev => ({nav: false}))
+        this.setState(prev => ({component:0,nav: false}))
     }
 
     handleScrollDown = () => {
@@ -36,6 +36,31 @@ class Layout extends Component {
         console.log("scroll down");
 
         this.setState(prev => prev.component==0 ? ({component: 3}) : ({component: ((prev.component-1)%4)}))
+    }
+
+    homeClicked = () => {
+        if ($("header").hasClass("dark")) {
+            $("header").toggleClass("dark");
+        }
+        this.setState(prev => ({component:1, nav: !prev.nav}))
+    }
+    aboutClicked = () => {
+        if ($("header").hasClass("dark")) {
+            $("header").toggleClass("dark");
+        }
+        this.setState(prev => ({component:1, nav: !prev.nav}))
+    }
+    teamClicked = () => {
+        if ($("header").hasClass("dark")) {
+            $("header").toggleClass("dark");
+        }
+        this.setState(prev => ({component:2, nav: !prev.nav}))
+    }
+    contactClicked = () => {
+        if ($("header").hasClass("dark")) {
+            $("header").toggleClass("dark");
+        }
+        this.setState(prev => ({component:3, nav: !prev.nav}))
     }
 
     render() {
@@ -86,7 +111,7 @@ class Layout extends Component {
 
 
 
-                    <Nav on={this.state.nav} clicked={this.onHamClick}/>
+                    <Nav homeClicked={this.homeClicked} aboutClicked={this.aboutClicked} teamClicked={this.teamClicked} contactClicked={this.contactClicked} on={this.state.nav} clicked={this.onHamClick}/>
                 </div>
 
             </ReactScrollWheelHandler>
