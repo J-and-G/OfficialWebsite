@@ -15,13 +15,13 @@ class Layout extends Component {
         nav: false,
     }
     
-    componentWillMount(){
+    // componentWillMount(){
 
-        const script1 = document.createElement("script");
-        script1.src = "/javascripts/plugins.js";
-        document.body.appendChild(script1);
+    //     const script1 = document.createElement("script");
+    //     script1.src = "/javascripts/plugins.js";
+    //     document.body.appendChild(script1);
 
-    }
+    // }
     
     onHamClick = () => {
         this.setState(prev => ({nav: !prev.nav}))
@@ -59,7 +59,7 @@ class Layout extends Component {
                 
                 </Route>
 
-            
+                 
                 <Nav on={this.state.nav} clicked={this.onHamClick} />
             </div>
 
