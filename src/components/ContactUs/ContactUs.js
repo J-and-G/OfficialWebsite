@@ -3,16 +3,41 @@ import './contact.css';
 import home from "../../assets/home.png";
 import phone from "../../assets/phone.png";
 import $ from 'jquery';
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 
 class Contact extends Component {
+
+
+    state = {
+        listening: true
+    }
+
     componentDidMount() {
         $("header").addClass("dark");
-        setTimeout(()=>{$(".backup-overlay").addClass("hide-overlay")},200)
+        setTimeout(()=>{$(".backup-overlay").addClass("hide-overlay")},100)
+
+        setTimeout(()=>{
+            this.setState(prev => ({listening: false}));
+        }, 500);
+    }
+
+    handleScrollUp = () => {
+        this.props.history.push('/team');
+    }
+
+    handleScrollDown = () => {
+        this.props.history.push('/');
     }
 
     render() {
         return (
+
+            <ReactScrollWheelHandler
+                upHandler={() => this.handleScrollUp()}
+                downHandler={() => this.handleScrollDown()}
+                pauseListeners = {this.state.listening}>
+
             <div>
                 <div className="backup-overlay"></div>
                 <section id="lets-talk">
@@ -45,6 +70,8 @@ class Contact extends Component {
                     </div>
                 </div>
             </div>
+
+            </ReactScrollWheelHandler>
 
 
         );

@@ -1,48 +1,24 @@
 import React, {Component} from 'react';
 import './home.css';
 import Preloader from "../Preloader/Preloader";
-import About from "../About/About";
-import Team from "../Team/Team";
-import ContactUs from "../ContactUs/ContactUs";
-import SwipeableRoutes from "react-swipeable-routes";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import {withRouter} from "react-router-dom";
 
 import $ from "jquery";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 class Home extends Component {
 
     state = {
-        preloader: true
+        preloader: true,
+        listening: true
     }
 
-    // componentWillMount(){
-
-    //     const script1 = document.createElement("script");
-    //     script1.src = "/javascripts/plugins.js";
-    //     document.body.appendChild(script1);
-
-    // }
 
     componentDidMount() {
-        //document.addEventListener('scroll',this.handleScroll);
-        // handleScroll = ()=>{
-        //     this.props.history.push('/about')
-        // }
 
 
         $("header").removeClass("dark");
-        
-        // $(document).scroll(function() {
-        //     $(".slideanim").each(function(){
-        //       var pos = $(this).offset().top;
-          
-        //       var winTop = $(window).scrollTop();
-        //       if (pos < winTop + 600) {
-        //         $(this).addClass("slide");
-        //       }
-        //     });
-        //   });
-        //setTimeout(() => {document.addEventListener('scroll',this.hadnleScroll)},3000);
 
         if (sessionStorage.getItem("p") !== "t") {
             const script1 = document.createElement("script");
@@ -55,112 +31,74 @@ class Home extends Component {
             document.body.appendChild(script2);
 
             sessionStorage.setItem("p", "t");
-        }
-        else {
+        } else {
             this.setState({preloader: false});
-
-            // const script1 = document.createElement("script");
-            // script1.src = "/javascripts/plugins.js";
-            // document.body.appendChild(script1);
 
             const script2 = document.createElement("script");
             script2.src = "/javascripts/index-mod.js";
             document.body.appendChild(script2);
 
-            // function script1(){
-            //     return new Promise(function (fulfill, reject){
-            //         //do stuff
-            //         const script1 = document.createElement("script");
-            // script1.src = "/javascripts/plugins.js";
-            // document.body.appendChild(script1);
-            //         // fulfill(result); //if the action succeeded
-            //         // reject(error); //if the action did not succeed
-            //     });
-            // }
-
-            // script1().then(function(){   const script2 = document.createElement("script");
-            // script2.src = "/javascripts/index-mod.js";
-            // document.body.appendChild(script2);})
-
-            // $.when(function(){  const script1 = document.createElement("script");
-            // script1.src = "/javascripts/plugins.js";
-            // document.body.appendChild(script1);}).then(function(){   const script2 = document.createElement("script");
-            // script2.src = "/javascripts/index-mod.js";
-            // document.body.appendChild(script2);});
         }
 
-        
+        setTimeout(()=>{
+            this.setState(prev => ({listening: false}));
+        }, 500);
+
 
     }
 
-    // function1(){
+    handleScrollUp = () => {
+        this.props.history.push('/contact');
+    }
 
-    //     const script1 = document.createElement("script");
-    //         script1.src = "/javascripts/plugins.js";
-    //         document.body.appendChild(script1);
-
-    // }
-
-    // function2(){
-    //     const script2 = document.createElement("script");
-    //         script2.src = "/javascripts/index-mod.js";
-    //         document.body.appendChild(script2);
-    // }
-
-    
-
-    
+    handleScrollDown = () => {
+        this.props.history.push('/about');
+    }
 
     render() {
 
         return (
 
-            
-            <div className="home-page">
-
-          
-          
-
-                 
-       
-         
-      
-      
-
-                {this.state.preloader && <Preloader/>}
-                {!this.state.preloader && <div className="backup-overlay"></div>}
+            <ReactScrollWheelHandler
+                upHandler={() => this.handleScrollUp()}
+                downHandler={() => this.handleScrollDown()}
+                pauseListeners = {this.state.listening}>
 
 
-                <section id="home" className="home-particles">
-                    <div className="inner-home">
+                <div className="home-page">
 
 
-                        <div className="center-title">
-                            <h1>ideate.</h1>
-                            <h1>create.</h1>
-                            <h1>iterate.</h1>
+                    {this.state.preloader && <Preloader/>}
+                    {!this.state.preloader && <div className="backup-overlay"></div>}
+
+
+                    <section id="home" className="home-particles">
+                        <div className="inner-home">
+
+
+                            <div className="center-title">
+                                <h1>ideate.</h1>
+                                <h1>create.</h1>
+                                <h1>iterate.</h1>
+                            </div>
+
+                            <div className="top-text">
+                                <a href="#info">Scroll for more info</a>
+                            </div>
+                            <div className="scroll-icon">
+                                <a href="#info" className="smoothscroll">
+                                    <div className="mouse"></div>
+                                </a>
+                                <div className="end-top"></div>
+                            </div>
                         </div>
 
-                        <div className="top-text">
-                            <a href="#info">Scroll for more info</a>
-                        </div>
-                        <div className="scroll-icon">
-                            <a href="#info" className="smoothscroll">
-                                <div className="mouse"></div>
-                            </a>
-                            <div className="end-top"></div>
-                        </div>
-                    </div>
+                    </section>
 
-                </section>
 
-    
+                </div>
 
-              
-             
-
-            </div>
-
+            </ReactScrollWheelHandler>
 
 
         );
@@ -169,4 +107,4 @@ class Home extends Component {
 
 }
 
-export default Home;
+export default withRouter(Home);

@@ -7,32 +7,56 @@ import $ from 'jquery';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 class About extends Component {
+
+
+    state = {
+        listening: true
+    }
+
+
+
     componentDidMount() {
-        //document.onscroll = ()=>{ this.props.history.push('/about')}
         $("header").removeClass("dark");
         $(".hamburger-icon").addClass("hamburger-icon-dark");
         $(document).scroll(function() {
             $(".slideanim").each(function(){
               var pos = $(this).offset().top;
-          
+
               var winTop = $(window).scrollTop();
               if (pos < winTop + 600) {
                 $(this).addClass("slide");
               }
             });
           });
-        
+
+        setTimeout(()=>{
+            this.setState(prev => ({listening: false}));
+        }, 500);
+
+
+
+    }
+
+    handleScrollUp = () => {
+        // this.props.history.push('/about');
+        console.log("scroll up")
+    }
+
+
+    handleScrollDown = () => {
+        // this.props.history.push('/contact');
+        console.log("scroll down")
     }
 
     render() {
         return (
-          
-            <div class="team-list">
-            
-            
-            
-           
 
+            <ReactScrollWheelHandler
+                upHandler={() => this.handleScrollUp()}
+                downHandler={() => this.handleScrollDown()}
+                pauseListeners = {true}>
+
+            <div class="team-list">
                 <section id="member-1" class="team-member-container slide">
                     <div className="image-poster"><img src={abhi} alt="developer"/></div>
 
@@ -58,9 +82,9 @@ class About extends Component {
                             <h3>Application Devloper</h3>
                             <h1> Shikhar Khandelwal</h1>
                             <p> Shikhar is our Application Developer. He has been developing applications for almost three years
-                                and has never failed to provide a software that is commendable in all aspects. Focusing on optimising 
-                                already created softwares, to creating efficient applications that benefit the society, Shikhar loves the 
-                                development area of computer science. 
+                                and has never failed to provide a software that is commendable in all aspects. Focusing on optimising
+                                already created softwares, to creating efficient applications that benefit the society, Shikhar loves the
+                                development area of computer science.
                                 <br/><br/>On a less serious note, he loves playing basketball and listening to music. Guy is like a 'White Iverson'!</p>
                         </div>
                     </div>
@@ -85,9 +109,11 @@ class About extends Component {
                     </div>
                 </section>
 
-            
+
             </div>
-            
+
+            </ReactScrollWheelHandler>
+
 
         );
     }
