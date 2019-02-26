@@ -38,14 +38,14 @@ class About extends Component {
     }
 
     handleScrollUp = () => {
-        // this.props.history.push('/about');
-        console.log("scroll up")
+        this.props.history.push('/about');
+        // console.log("scroll up")
     }
 
 
     handleScrollDown = () => {
-        // this.props.history.push('/contact');
-        console.log("scroll down")
+        this.props.history.push('/contact');
+        // console.log("scroll down")
     }
 
     render() {
